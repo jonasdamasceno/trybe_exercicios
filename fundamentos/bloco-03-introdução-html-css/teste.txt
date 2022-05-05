@@ -1,0 +1,6 @@
+so para enviar ao github
+O que eu vou aprender na Trybe:
+
+- Unix
+- Bash
+- Git
