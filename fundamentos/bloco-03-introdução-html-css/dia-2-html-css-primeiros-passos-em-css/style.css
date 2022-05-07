@@ -1,0 +1,35 @@
+h1{
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+    font-family: fantasy ;
+  }
+  #notundered {
+    background-color: royalblue
+  }
+  .commonStyle {
+    background-color: black;
+    color: white;
+   
+   }
+  p{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: ivory;
+  }
+  body{
+    font-size: 16px;
+    background-color: rgb(255, 400, 200)
+  }
+  #yelow{
+    background-color: yellow;
+    color: blue;
+  }
+  #red{
+    background-color: red;
+  }
+  #brow{
+    background-color: brown;
+  }
