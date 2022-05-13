@@ -1,13 +1,4 @@
-h1, p{
-    text-align: center;
-}
-li:hover{
-    background-color: green;
-}
-li:active{
-    color: white;
-    font-family:'Courier New', Courier, monospace
-}
-ul, ol{
-    list-style:circle;
+div:hover{
+    border: 50px;
+    border-color: black;
 }
