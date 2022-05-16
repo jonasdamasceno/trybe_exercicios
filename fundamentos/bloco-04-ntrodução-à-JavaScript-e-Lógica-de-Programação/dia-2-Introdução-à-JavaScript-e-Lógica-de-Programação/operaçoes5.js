@@ -5,7 +5,6 @@ Um ângulo será considerado inválido se não tiver um valor positivo.*/
 const A = 70;
 const B = 60;
 const C = 60;
- let tamanhoDosAngulos = A > 0 && B > 0 && C > 0;
   
  if((A + B + C) === 180){
     console.log(true);
