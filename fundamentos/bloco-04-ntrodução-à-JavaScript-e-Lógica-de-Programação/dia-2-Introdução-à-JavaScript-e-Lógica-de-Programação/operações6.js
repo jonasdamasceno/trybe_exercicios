@@ -1,5 +1,5 @@
-let pecaDoXadrex = "bispo";
-switch (pecaDoXadrex.toLowerCase()){
+let pecaDoXadrez = "bispo";
+switch (pecaDoXadrez.toLowerCase()){
   case "rei":
     console.log("rei -> uma casa apenas, em qualquer direção");
       break;
