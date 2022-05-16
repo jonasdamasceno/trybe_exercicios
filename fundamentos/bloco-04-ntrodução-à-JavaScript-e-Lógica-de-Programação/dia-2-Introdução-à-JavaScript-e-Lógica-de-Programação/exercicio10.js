@@ -9,6 +9,6 @@ if (custo < 0 || venda < 0){
  console.log("Erro, valores invalidos");
 }
 else if(custo > 0 && venda > 0){
-  let lucro = ((venda - (custo * 0.2))*1000)
+  let lucro = ((venda - (custo * 1.2))*1000)
     console.log(lucro); 
 }
