@@ -10,12 +10,12 @@ Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
 Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.*/
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-const total = numbers.reduce((total, currentElement) => total + currentElement);
-  let media = total / numbers.length
-
-  if (media > 20){
-    console.log("valor maior que 20")
+  let maiorNumero = numbers[0]
+for(let index = 1; index < numbers.length; index +=1){
+  if(numbers[index] > maiorNumero){
+    maiorNumero = numbers[index]
+  
   }
-  else{
-    console.log.apply("valor menor que 20")
-  }
+}
+  console.log(maiorNumero)
+  
