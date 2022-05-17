@@ -1,5 +1,9 @@
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let menuServices = menu.indexOf("serviços");
-let indexOfPortfolio = menu.indexOf("Portfólio");
-menu.push("contato")
-console.log(menu);
+let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
+  for(let index = 0; index < groceryList.length; index +=1){
+    console.log(groceryList[index]);
+  }
+
+  let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+  for(let name of names){
+    console.log(names);
+  }
