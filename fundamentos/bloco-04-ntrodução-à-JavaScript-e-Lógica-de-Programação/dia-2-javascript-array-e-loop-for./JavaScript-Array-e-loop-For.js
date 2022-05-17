@@ -11,4 +11,5 @@ Utilizando o array criado no exercício anterior imprima o resultado da divisão
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 const total = numbers.reduce((total, currentElement) => total + currentElement);
- console.log(total)
+  let media = total / numbers.length
+console.log(media);
