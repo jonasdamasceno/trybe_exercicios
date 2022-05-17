@@ -9,14 +9,10 @@ Utilizando for, descubra qual o menor valor contido no array e imprima-o;
 Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
 Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.*/
 
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let menorNumero = numbers[0];
-numbers.push(87, 55, 27, 1)
-for (let index = 1; index < numbers.length; index += 1) {
-  if (numbers[index] < menorNumero) {
-    menorNumero = numbers[index];
+let numbers = [];
+  for(let index = 1; index <= 25; index += 1){
+    numbers.push(index);
   }
-}
+    console.log(numbers);
 
-console.log(menorNumero);
-  
+//lembrar das diferenças entre os [] e os ()
