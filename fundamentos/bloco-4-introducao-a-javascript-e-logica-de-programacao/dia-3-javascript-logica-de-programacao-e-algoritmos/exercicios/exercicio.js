@@ -14,3 +14,21 @@
 
 //Escreva dois algoritmos: um que retorne a maior palavra deste array e outro que retorne a menor. Considere o número de caracteres de cada palavra.
     
+let array = ['java', 'javascript', 'python', 'html', 'css'];
+
+let bigger = "";
+array.split(' ').array.forEach(word => {
+  if(word.trim().length > bigger.length){
+    bigger = word.trim();
+  }
+});
+
+let n = 5;
+let aux = "";
+for (let linha = 1; linha <= n; linha += 1) {
+  for (let coluna = 1; coluna <= n; coluna += 1) {
+    aux += "*";
+  }
+  console.log(aux);
+  aux = "";
+}
