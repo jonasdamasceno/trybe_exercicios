@@ -7,3 +7,9 @@
       resultado *= index;
     }
     console.log(resultado);
+
+    // Agora, desenvolva um algoritmo que é capaz de inverter uma palavra.
+     let palavra = "banana";
+     let retornoAnagrama = palavra.split('').reverse('').join('');
+      console.log(retornoAnagrama);
+    
