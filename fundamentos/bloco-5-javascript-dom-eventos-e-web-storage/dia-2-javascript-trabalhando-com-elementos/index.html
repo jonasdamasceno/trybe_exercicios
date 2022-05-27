@@ -19,44 +19,15 @@
     </section>
   </main>
   <script>
-      let local = document.getElementById('elementoOndeVoceEsta')
-      local.parentElement = local.style.color = 'red'
-
-      function adicionandoTexto(){
-          let texto = document.getElementById('primeiroFilhoDoFilho').innerHTML = "gerador de lero lero";
+    const pai = document.getElementById('pai');
+    for(let index = 0; index < pai.childNodes.length -1; index += 1){
+    const currentChild = pai.childNodes[index];
+    if(currentChild.id !== "elementoOndeVoceEsta"){
+      currentChild.remove();
       }
-     const pai = local.parentElement
-      // acesse o primeiro filho apartir do pai
-     const primeiroFilho = pai.firstElementChild
-     
-     //acesse o primeiro filho apartir do elemento onde vc esta
-     const primeiroFilhoApartirDeOnde = local.previousElementSibling
-    
-     //acesse o texto atenção a partir de onde vc esta
-     const texto2 =  local.nextElementSibling;
-     // acesse o terceiro filho apartir do elemento onde vc esta
-     const terceiroFilho = local.nextElementSibling;
-     //acesse o terceiro filho apartir do pai
-     const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
-
-     //Crie um irmão para elementoOndeVoceEsta.
-    const irmãoOndeVoceEsta = local.createElement('section');
-    irmãoOndeVoceEsta.id = "irmãoOndeVoceEsta";
-    pai.appendChild(irmãoOndeVoceEsta);
-//Crie um filho para elementoOndeVoceEsta.
-const meuFilho = local.createElement('section');
-meuFilho.id = "meuFilho"
-local.appendChild(meuFilho);
-
-//Crie um filho para primeiroFilhoDoFilho.
-const novoFIlhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
-const novoFIlhoDoFilho2 = novoFIlhoDoFilho.createElement('section');
-novoFIlhoDoFilho2.id = "novoFilhoDoFilho";
-novoFIlhoDoFilho.appendChild(novoFIlhoDoFilho2);
-//A partir desse filho criado, acesse terceiroFilho.
-const achandoOTerceiroFilho = novoFIlhoDoFilho2.parentElement.parentElement.nextElementSibling
-console.log(achandoOTerceiroFilho);
-    
+    } 
+    const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+    segundoEUltimoFilhoDoFilho.remove(); 
   </script>
 </body>
 
