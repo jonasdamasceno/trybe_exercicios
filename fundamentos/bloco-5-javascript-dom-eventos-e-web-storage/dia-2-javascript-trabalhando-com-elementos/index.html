@@ -38,6 +38,24 @@
      const terceiroFilho = local.nextElementSibling;
      //acesse o terceiro filho apartir do pai
      const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+
+     //Crie um irmão para elementoOndeVoceEsta.
+    const irmãoOndeVoceEsta = local.createElement('section');
+    irmãoOndeVoceEsta.id = "irmãoOndeVoceEsta";
+    pai.appendChild(irmãoOndeVoceEsta);
+//Crie um filho para elementoOndeVoceEsta.
+const meuFilho = local.createElement('section');
+meuFilho.id = "meuFilho"
+local.appendChild(meuFilho);
+
+//Crie um filho para primeiroFilhoDoFilho.
+const novoFIlhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+const novoFIlhoDoFilho2 = novoFIlhoDoFilho.createElement('section');
+novoFIlhoDoFilho2.id = "novoFilhoDoFilho";
+novoFIlhoDoFilho.appendChild(novoFIlhoDoFilho2);
+//A partir desse filho criado, acesse terceiroFilho.
+const achandoOTerceiroFilho = novoFIlhoDoFilho2.parentElement.parentElement.nextElementSibling
+console.log(achandoOTerceiroFilho);
     
   </script>
 </body>
