@@ -94,9 +94,6 @@ function destacarFeriados() {
 destacarFeriados();
 
 
-
-
-
 function buttonFriday(friday){
   let buttonConteiner2 = document.querySelector('.buttons-container');
   let buttonFridays = document.createElement('button');
@@ -109,4 +106,22 @@ function buttonFriday(friday){
 };
 buttonFriday('Sextou');
 
+// Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+// É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 
+function destacarSextas(){
+  let clickBotaoSextou = document.querySelector('#btn-friday');
+  let diasDeSexta = document.querySelectorAll('.friday')
+  let backgroundColor = 'rgb(238,238,238)';
+  let corSextou = 'rgb(0,100,0)';
+  clickBotaoSextou.addEventListener('click', function(){
+    for(let index = 0; index < diasDeSexta.length; index += 1){
+      if(diasDeSexta[index].style.backgroundColor === corSextou){
+        diasDeSexta[index].style.backgroundColor = backgroundColor;
+      } else{
+        diasDeSexta[index].style.backgroundColor = corSextou;
+      }
+    }
+  })
+};
+destacarSextas();
