@@ -77,15 +77,15 @@ buttonHoliday('Feriado!!');
 function destacarFeriados() {
   let clickBotaoFeriado = document.querySelector('#btn-holiday');
   let diasDeFeriado = document.querySelectorAll('.holiday')
-  let backgroundColor = 'rgb(238,238,238)';
+  let taskColor = 'rgb(238,238,238)';
   let cor = 'blue';
 
   clickBotaoFeriado.addEventListener('click', function() {
     for (let index = 0; index < diasDeFeriado.length; index += 1) {
-      if (diasDeFeriado[index].style.backgroundColor === cor) {
-        diasDeFeriado[index].style.backgroundColor = backgroundColor;
+      if (diasDeFeriado[index].style.taskColor === cor) {
+        diasDeFeriado[index].style.taskColor = taskColor;
       } else {
-        diasDeFeriado[index].style.backgroundColor = cor;
+        diasDeFeriado[index].style.taskColor = cor;
       }
     }
   })
@@ -112,14 +112,14 @@ buttonFriday('Sextou');
 function destacarSextas(){
   let clickBotaoSextou = document.querySelector('#btn-friday');
   let diasDeSexta = document.querySelectorAll('.friday')
-  let backgroundColor = 'rgb(238,238,238)';
+  let taskColor = 'rgb(238,238,238)';
   let corSextou = 'rgb(0,100,0)';
   clickBotaoSextou.addEventListener('click', function(){
     for(let index = 0; index < diasDeSexta.length; index += 1){
-      if(diasDeSexta[index].style.backgroundColor === corSextou){
-        diasDeSexta[index].style.backgroundColor = backgroundColor;
+      if(diasDeSexta[index].style.taskColor === corSextou){
+        diasDeSexta[index].style.taskColor = taskColor;
       } else{
-        diasDeSexta[index].style.backgroundColor = corSextou;
+        diasDeSexta[index].style.taskColor = corSextou;
       }
     }
   })
@@ -171,7 +171,48 @@ function addCaption(color){
   let elementTag = document.createElement('div');
 
   elementTag.className = 'task';
-  elementTag.style.backgroundColor = color
+  elementTag.style.taskColor = color
   tasksConteiner.appendChild(elementTag);   
 };
 addCaption('orange');
+
+// mplemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected, ou seja, quando sua tarefa possuir a classe task selected, ela estará selecionada.
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task, ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+
+function selectingTag(){
+  let elementTag = document.querySelector('.task');
+  let selectedTask = document.getElementsByClassName('taks selected');
+
+
+  elementTag.addEventListener('click', function(event){
+    if(selectedTask.length === 0){
+      event.target.className = 'task selected'
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+selectingTag();
+
+// Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119).
+
+function setDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+  
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+setDayColor();
