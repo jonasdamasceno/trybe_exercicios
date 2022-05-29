@@ -112,14 +112,14 @@ buttonFriday('Sextou');
 function destacarSextas(){
   let clickBotaoSextou = document.querySelector('#btn-friday');
   let diasDeSexta = document.querySelectorAll('.friday')
-  let taskColor = 'rgb(238,238,238)';
+  let backgroundColor = 'rgb(238,238,238)';
   let corSextou = 'rgb(0,100,0)';
   clickBotaoSextou.addEventListener('click', function(){
     for(let index = 0; index < diasDeSexta.length; index += 1){
-      if(diasDeSexta[index].style.taskColor === corSextou){
-        diasDeSexta[index].style.taskColor = taskColor;
+      if(diasDeSexta[index].style.backgroundColor === corSextou){
+        diasDeSexta[index].style.backgroundColor = backgroundColor;
       } else{
-        diasDeSexta[index].style.taskColor = corSextou;
+        diasDeSexta[index].style.backgroundColor = corSextou;
       }
     }
   })
@@ -171,7 +171,7 @@ function addCaption(color){
   let elementTag = document.createElement('div');
 
   elementTag.className = 'task';
-  elementTag.style.taskColor = color
+  elementTag.style.backgroundColor = color
   tasksConteiner.appendChild(elementTag);   
 };
 addCaption('orange');
