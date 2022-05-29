@@ -20,6 +20,7 @@ Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a clas
 Copiar*/
 let dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
+
 function criarDias(){
   const criarOsDIasMes = document.querySelector('#days')
   for(let index = 0; index < dezDaysList.length; index += 1){
@@ -53,6 +54,10 @@ criarDias();
 //Adicione a este botão a ID "btn-holiday".
 //Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
 
+//Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+//Adicione a este botão a ID "btn-holiday".
+//Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
+
 function buttonHoliday(button){
   let buttonConteiner = document.querySelector('.buttons-container');
   let botaoFeriado = document.createElement('button');
@@ -66,6 +71,8 @@ buttonHoliday('Feriado!!');
 
 //Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday".
 //É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)"
+
+
 
 function destacarFeriados() {
   let clickBotaoFeriado = document.querySelector('#btn-holiday');
@@ -88,4 +95,18 @@ destacarFeriados();
 
 
 
- 
+
+
+function buttonFriday(friday){
+  let buttonConteiner2 = document.querySelector('.buttons-container');
+  let buttonFridays = document.createElement('button');
+  let buttonFridaysid = 'btn-friday';
+
+  buttonFridays.innerText = friday;
+  buttonFridays.id = buttonFridaysid;
+  buttonConteiner2.appendChild(buttonFridays);
+
+};
+buttonFriday('Sextou');
+
+
