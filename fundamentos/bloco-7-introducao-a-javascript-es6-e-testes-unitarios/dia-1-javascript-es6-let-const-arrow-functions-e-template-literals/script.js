@@ -43,7 +43,17 @@
 //   }
 // console.log(returnFatorial(5));
 
-const fatorial = num2 => {
-  return (num2 === 1 || num2 === 0) ? 1 : num2 * fatorial(num2 - 1)
-}
-console.log(fatorial(5));
+  // const fatorial = num2 => {
+  //   return (num2 === 1 || num2 === 0) ? 1 : num2 * fatorial(num2 - 1)
+  // }
+  // console.log(fatorial(6));
+
+  // Crie uma função que receba uma frase e retorne a maior palavra.
+  let longestWord = 'Antônio foi no banheiro e não sabemos o que aconteceu';
+  let biger = '';
+  longestWord.split(' ').forEach(palavra => {
+    if (palavra.trim().length > biger.length) {
+      biger = palavra.trim();
+    }
+  });
+  console.log(biger);
