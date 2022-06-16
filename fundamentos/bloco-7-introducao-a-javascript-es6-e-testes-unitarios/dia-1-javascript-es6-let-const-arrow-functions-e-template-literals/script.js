@@ -27,18 +27,23 @@
   //parte II
   // Crie uma função que receba um número e retorne seu fatorial.
 
-  function returnFatorial(num1) {
-    let soma = 1
-    if (Number.isInteger(num1) === true){
-      while(num1 > 0){
-        soma = soma*num1
-        console.log(num1);
-        num1 -= 1;
-      }
-      return soma;
-    }
-    else {
-        return 0; 
-    }
-  }
-console.log(returnFatorial(5));
+//   function returnFatorial(num1) {
+//     let soma = 1
+//     if (Number.isInteger(num1) === true){
+//       while(num1 > 0){
+//         soma = soma*num1
+//         console.log(num1);
+//         num1 -= 1;
+//       }
+//       return soma;
+//     }
+//     else {
+//         return 0; 
+//     }
+//   }
+// console.log(returnFatorial(5));
+
+const fatorial = num2 => {
+  return (num2 === 1 || num2 === 0) ? 1 : num2 * fatorial(num2 - 1)
+}
+console.log(fatorial(5));
