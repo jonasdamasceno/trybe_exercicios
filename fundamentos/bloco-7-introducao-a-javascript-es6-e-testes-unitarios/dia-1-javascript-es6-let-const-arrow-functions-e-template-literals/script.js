@@ -49,11 +49,17 @@
   // console.log(fatorial(6));
 
   // Crie uma função que receba uma frase e retorne a maior palavra.
-  let longestWord = 'Antônio foi no banheiro e não sabemos o que aconteceu';
-  let biger = '';
-  longestWord.split(' ').forEach(palavra => {
-    if (palavra.trim().length > biger.length) {
-      biger = palavra.trim();
-    }
+  // let longestWord = 'Antônio foi no banheiro e não sabemos o que aconteceu';
+  // let biger = '';
+  // longestWord.split(' ').forEach(palavra => {
+  //   if (palavra.trim().length > biger.length) {
+  //     biger = palavra.trim();
+  //   }
+  // });
+  // console.log(biger);
+  const contador = document.querySelector('.badge');
+
+  document.querySelector('button').addEventListener('click', function(){
+    var numero = parseInt(contador.textContent) + 1;
+    contador.textContent = numero;
   });
-  console.log(biger);
