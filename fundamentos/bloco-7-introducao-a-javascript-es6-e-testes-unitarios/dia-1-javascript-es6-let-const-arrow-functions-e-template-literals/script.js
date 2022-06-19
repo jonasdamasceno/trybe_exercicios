@@ -60,6 +60,12 @@
   const contador = document.querySelector('.badge');
 
   document.querySelector('button').addEventListener('click', function(){
-    var numero = parseInt(contador.textContent) + 1;
+    let numero = parseInt(contador.textContent) + 1;
     contador.textContent = numero;
   });
+
+  function trocaX (nome) {
+    const frase = 'Tryber x aqui!';
+    frase.replace('x', `${nome}`)
+  }
+console.log(trocaX(jonas));
