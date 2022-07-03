@@ -76,3 +76,8 @@ const books = [
     });
   };
 
+  function getNamedBook(books) {
+    let nameBookLength
+    return books.find((book) => book.name.length === 26);
+  }
+    // escreva seu código aqui
