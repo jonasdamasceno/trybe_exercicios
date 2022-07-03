@@ -80,4 +80,6 @@ const books = [
     let nameBookLength
     return books.find((book) => book.name.length === 26);
   }
-    // escreva seu código aqui
+  function booksOrderedByReleaseYearDesc(books) {
+    return books.sort((a, b) => b.releaseYear - a.releaseYear);
+  };
