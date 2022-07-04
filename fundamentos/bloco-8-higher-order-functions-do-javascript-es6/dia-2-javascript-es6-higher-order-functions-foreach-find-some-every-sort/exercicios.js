@@ -105,3 +105,11 @@ function someBookWasReleaseOnThe80s() {
 };
 someBookWasReleaseOnThe80s(books);
 console.log(someBookWasReleaseOnThe80s(books));
+
+
+
+function authorUnique() {
+  return books.every((book) => !books.some((bookSome) => (bookSome.author.birthYear === book.author.birthYear) && bookSome.author.name !== book.author.name));  
+};
+authorUnique(books);
+console.log(authorUnique(books));
