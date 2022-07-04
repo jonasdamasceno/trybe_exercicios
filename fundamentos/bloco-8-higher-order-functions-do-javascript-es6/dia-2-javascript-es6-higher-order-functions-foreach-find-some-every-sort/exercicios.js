@@ -79,7 +79,29 @@ const books = [
   function getNamedBook(books) {
     let nameBookLength
     return books.find((book) => book.name.length === 26);
-  }
+  };
+getNamedBook(books);
+console.log(getNamedBook(books));
+
+
   function booksOrderedByReleaseYearDesc(books) {
     return books.sort((a, b) => b.releaseYear - a.releaseYear);
   };
+booksOrderedByReleaseYearDesc(books);
+console.log(booksOrderedByReleaseYearDesc(books));
+
+  const expectedResult = false;
+
+function everyoneWasBornOnSecXX() {
+  return books.every((book) => (book.author.birthYear > 1900 && book.author.birthYear < 2000));
+};
+everyoneWasBornOnSecXX(books);
+console.log(everyoneWasBornOnSecXX(books));
+
+
+
+function someBookWasReleaseOnThe80s() {
+  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
+};
+someBookWasReleaseOnThe80s(books);
+console.log(someBookWasReleaseOnThe80s(books));
